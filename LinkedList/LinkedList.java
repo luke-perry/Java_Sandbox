@@ -67,8 +67,15 @@ public class LinkedList<T>{
     remove(size-1);
   }
 
-  // Contains
-  public int contains(T value){
+  // Contains and Index of
+  public boolean contains(T val){
+    int index = indexOf(val);
+    if(index != -1) {
+      return true;
+    }
+    return false;
+  }
+  public int indexOf(T value){
       int temp;
       Node<T> curr = head;
 
